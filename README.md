@@ -11,32 +11,48 @@ Currently, the interface supports the following models:
 *   **VLM (Vision Language Model):** A multimodal model capable of understanding both text and images.
 *   **SAM (Segment Anything Model):** A powerful computer vision model designed to generate high-quality object segmentation masks from images.
 
-## 🚀 Setup & Installation
+## 🚀 How to Start the Project (From GitHub)
+
+If you are viewing this repository on GitHub and want to run the project locally, follow these steps in order:
 
 ### Prerequisites
-1.  Python 3.8+ (Recommended)
-2.  A valid [Groq API Key](https://console.groq.com/).
+1.  **Python 3.8+** must be installed on your computer.
+2.  You need a valid **Groq API Key**. You can get one for free at [console.groq.com](https://console.groq.com/).
 
-### Installation
+### Step-by-Step Installation
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/jagdees2004/models.git
-    cd models
-    ```
+**1. Open your terminal or command prompt.**
 
-2.  **Install dependencies:**
-    Install the core requirements from the root directory. You may also need to install specific requirements located within individual model directories (e.g., `MoE/requirements.txt`, `SAM/requirements.txt`).
-    ```bash
-    pip install -r requirements.txt
-    ```
+**2. Clone the repository to your local machine:**
+```bash
+git clone https://github.com/jagdees2004/models.git
+cd models
+```
 
-3.  **Configure Environment Variables:**
-    Create a `.env` file in the root directory and add your Groq API key:
-    ```env
-    GROQ_API_KEY="your_api_key_here"
-    ```
-    *Note: The `.env` file is included in `.gitignore` to prevent accidental exposure of your keys to GitHub.*
+**3. Create a virtual environment (Recommended):**
+This keeps the project's dependencies separate from your system Python.
+```bash
+python -m venv venv
+```
+Activate the virtual environment:
+*   **Windows:** `venv\Scripts\activate`
+*   **Mac/Linux:** `source venv/bin/activate`
+
+**4. Install project dependencies:**
+This will download all the required libraries to run the application.
+```bash
+pip install -r requirements.txt
+```
+*(Note: If you plan to use specific models like MoE or SAM, you may also need to install their specific requirements located in their folders, e.g., `pip install -r MoE/requirements.txt`)*
+
+**5. Configure your API Key:**
+The application needs your Groq API key to function.
+*   Create a new file named exactly `.env` in the root `models` directory.
+*   Open the `.env` file in any text editor and paste your key like this:
+```env
+GROQ_API_KEY="your_actual_api_key_here"
+```
+*(Note: The `.env` file is ignored by Git, so your key will remain secure on your computer.)*
 
 ### Running the Application
 
